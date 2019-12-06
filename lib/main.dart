@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    imageCache.clear();
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'St. Sebastian Church',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home Page'),
     );
   }
 }
@@ -47,9 +49,11 @@ class MyHomePage extends StatefulWidget {
 
 
 class _MyHomePageState extends State<MyHomePage> {
-  MainOption op=MainOption(Text("Timing",style: TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize: 20),), Image.asset("assets/images/pg1.jpg"),TimingTable());
-  MainOption op1=MainOption(Text("About",style: TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize: 20),), Image.asset("assets/images/pg1.jpg"),Aboutpage());
-
+  MainOption op=MainOption(Text("Mass Timings",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/mass.jpg"),TimingTable());
+  MainOption op1=MainOption(Text("About",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/church.jpg"),Aboutpage());
+  MainOption op2=MainOption(Text("Family Unit",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/holyfamily.jpg"),Aboutpage());
+  MainOption op3=MainOption(Text("News",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/news.jpg"),Aboutpage());
+  MainOption op4=MainOption(Text("Temp",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/news.jpg"),Aboutpage());
 
   @override
   Widget build(BuildContext context) {
@@ -62,27 +66,46 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
 
       body:Center(
-          child:
-          Column(
-            children: <Widget>[
-              Container(
-//                color: Colors.blue,
-              margin: EdgeInsets.only(left:10,bottom: 20),
-                height: MediaQuery.of(context).size.height*0.1,
-                alignment: Alignment.bottomLeft,
-                child:Text("St Sebastian's Church",style: TextStyle(color:Colors.black,fontSize: 30))),
+        child: Column(
+          children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height*0.8,
-            child:ListView(
-              children: <Widget>[op1,op,op,op,op,op,op],scrollDirection: Axis.vertical,))],))
-      );
-//    );
+              margin: EdgeInsets.only(top:60.0),
+              // height: MediaQuery.of(context).size.height*0.1,
+              child: SafeArea(
+                top: true, bottom: true,
+                minimum: const EdgeInsets.all(15.0),
+                child: Center( 
+                  child: Text(
+                    "St Sebastian's Church",
+                    style: TextStyle(fontFamily:'avenir',
+                    color: Colors.black,
+                    fontSize: 27)))
+              )
+            ),
+            Container(
+              child:  Expanded(
+                child: ListView(
+                children: <Widget>[
+                op1,
+                op,
+                op2,
+                op3,
+                op4,
+                op4
+                ],
+                scrollDirection: Axis.vertical
+              )
+              )
+              // height: MediaQuery.of(context).size.height*0.85,
+            )
+          ],
+        )
+      )
+    );
   }
 }
 
-
 class MainOption extends StatelessWidget {
-//   String name;
   Image bgImage;
   Text name;
   Widget next;
@@ -96,10 +119,12 @@ class MainOption extends StatelessWidget {
             MaterialPageRoute(builder: (context) => next),
           );
         },
-        child:Padding(
-        padding: EdgeInsets.all(20),
+        child:
+        Padding(
+        padding: EdgeInsets.all(8.0),
+        
         child:ClipRRect(
-            borderRadius:BorderRadius.circular(20),
+            borderRadius:BorderRadius.circular(14),
             child:Column(
                 children:<Widget>[
                   Stack(children: <Widget>[
@@ -111,7 +136,7 @@ class MainOption extends StatelessWidget {
                     )
                   ])
                   ,])
-        )
+        ) 
     ));
   }
 }

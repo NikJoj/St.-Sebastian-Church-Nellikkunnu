@@ -12,7 +12,7 @@ class TimingTable extends StatelessWidget{
         margin: EdgeInsets.only(left:10,bottom: 20),
         height: MediaQuery.of(context).size.height*0.2,
         alignment: Alignment.bottomLeft,
-        child:Text("Mass Timings",style: TextStyle(color:Colors.black,fontSize: 30))),
+        child:Text("Mass Timings",style: TextStyle(fontFamily: 'avenir',color:Colors.black,fontSize: 30))),
     Container(
         height: MediaQuery.of(context).size.height*0.6,
         width:MediaQuery.of(context).size.width*0.8,
