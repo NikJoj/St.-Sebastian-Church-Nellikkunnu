@@ -1,7 +1,9 @@
 import 'package:church/map.dart';
 import 'package:church/news.dart';
+import 'package:church/search.dart';
 import 'package:church/timings.dart';
 import 'package:church/about.dart';
+import 'package:church/unit.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -53,9 +55,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   MainOption op=MainOption(Text("About",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/church.jpg"),Aboutpage());
   MainOption op1=MainOption(Text("Mass Timings",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/mass.jpg"),TimingTable());
-  MainOption op2=MainOption(Text("Family Units",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/holyfamily.jpg"),Aboutpage());
+  MainOption op2=MainOption(Text("Family Units",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/holyfamily.jpg"),Familyunit());
   MainOption op3=MainOption(Text("News",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/news.jpg"),Newspage());
   MainOption op4=MainOption(Text("Location",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/location.jpg"),Maps());
+  MainOption op5=MainOption(Text("Search",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/search2.jpg"),Searchbar());
 
   
 
@@ -92,9 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                 op,
                 op1,
-                op2,
                 op3,
-                op4,
+                op2,
+                op5,
+                op4
                 ],
                 scrollDirection: Axis.vertical
               )

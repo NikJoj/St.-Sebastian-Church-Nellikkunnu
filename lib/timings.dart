@@ -18,7 +18,7 @@ class TimingTable extends StatelessWidget{
 
       Container(
         padding: EdgeInsets.all(15.0),
-        height: MediaQuery.of(context).size.height*0.45,
+        height: MediaQuery.of(context).size.height*0.55,
         width:MediaQuery.of(context).size.width*0.8,
         alignment: Alignment.center,
         decoration: BoxDecoration(
@@ -40,6 +40,8 @@ class TimingTable extends StatelessWidget{
       rows:[
         DataRow(cells: [DataCell(Text("Monday\nto\nSaturday",style: TextStyle(fontFamily: 'gibson',fontSize: 15.0),)),DataCell(Text("Adoration: 6:00AM\nMass: 6:30AM, 5:15PM",style: TextStyle(fontFamily: 'gibson',fontSize: 15.0),))]),
         DataRow(cells: [DataCell(Text("Sunday",style: TextStyle(fontFamily: 'gibson',fontSize: 15.0),)),DataCell(Text("Mass: 6:00AM, 6:30AM, 5:15PM",style: TextStyle(fontFamily: 'gibson',fontSize: 15.0),))]),
+        DataRow(cells: [DataCell(Text("Office Timings",style: TextStyle(fontFamily: 'gibson',fontSize: 15.0),)),DataCell(Text("8:30AM to 12:30PM\n3:30PM to 6:45PM",style: TextStyle(fontFamily: 'gibson',fontSize: 15.0),))]),
+       
         ],
     
     )

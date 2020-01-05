@@ -45,9 +45,9 @@ class Newspage extends StatelessWidget
           PageView(
           controller: controller,
             children: <Widget>[
-            Info("assets/images/perunnal.jpeg","Perunnal","St. Sebastian Church, Nellikkunnu, Thrissur sets off with the 'Perunnall' celebrations!"),
-            Info("assets/images/nellikkunnu.jpg","Christmas","Christmas was well celebrated at the Nellikkunnu Church."),
-            Info("assets/images/nellikkunnu.jpg","Christmas Carol Competition","Christmas carol competition, Jingle Bells 2019."),
+            Info("assets/images/perunnal3.jpg","Perunnal","St. Sebastian Church, Nellikkunnu, Thrissur sets off with the 'Perunnal' celebrations!"),
+            Info("assets/images/christmas.jpg","Christmas","Christmas was celebrated at the Nellikkunnu Church."),
+            Info("assets/images/carol.jpg","Christmas Carol Competition","Christmas carol competition, Jingle Bells 2019."),
             Info("assets/images/nellikkunnu.jpg","News","Any other relevant news."),
 
           ]
