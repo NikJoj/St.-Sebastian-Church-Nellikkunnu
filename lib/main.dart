@@ -1,3 +1,5 @@
+import 'package:church/map.dart';
+import 'package:church/news.dart';
 import 'package:church/timings.dart';
 import 'package:church/about.dart';
 import 'package:flutter/material.dart';
@@ -49,11 +51,13 @@ class MyHomePage extends StatefulWidget {
 
 
 class _MyHomePageState extends State<MyHomePage> {
-  MainOption op=MainOption(Text("Mass Timings",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/mass.jpg"),TimingTable());
-  MainOption op1=MainOption(Text("About",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/church.jpg"),Aboutpage());
-  MainOption op2=MainOption(Text("Family Unit",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/holyfamily.jpg"),Aboutpage());
-  MainOption op3=MainOption(Text("News",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/news.jpg"),Aboutpage());
-  MainOption op4=MainOption(Text("Temp",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/news.jpg"),Aboutpage());
+  MainOption op=MainOption(Text("About",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/church.jpg"),Aboutpage());
+  MainOption op1=MainOption(Text("Mass Timings",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/mass.jpg"),TimingTable());
+  MainOption op2=MainOption(Text("Family Units",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/holyfamily.jpg"),Aboutpage());
+  MainOption op3=MainOption(Text("News",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/news.jpg"),Newspage());
+  MainOption op4=MainOption(Text("Location",style: TextStyle(fontFamily:'avenir',color:Colors.white,fontSize: 24),), Image.asset("assets/images/location.jpg"),Maps());
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -86,12 +90,11 @@ class _MyHomePageState extends State<MyHomePage> {
               child:  Expanded(
                 child: ListView(
                 children: <Widget>[
-                op1,
                 op,
+                op1,
                 op2,
                 op3,
                 op4,
-                op4
                 ],
                 scrollDirection: Axis.vertical
               )

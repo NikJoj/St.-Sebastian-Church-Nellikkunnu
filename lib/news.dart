@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:worm_indicator/shape.dart';
 import 'package:worm_indicator/worm_indicator.dart';
-class Aboutpage extends StatelessWidget
+class Newspage extends StatelessWidget
 {
   final controller=PageController(
   );
@@ -45,10 +45,10 @@ class Aboutpage extends StatelessWidget
           PageView(
           controller: controller,
             children: <Widget>[
-            Info("assets/images/nellikkunnu.jpg","St. Sebastian Church","St. Sebastian Church, Nellikkunnu, Thrissur was renovated with great grandeur not so long back. The foundation stone was laid by Mar Andrews Thazhath, Archbishop of Thrissur on 29-08-2010. The construction site was blessed on 16-11-2011 by Mar Raphael Thattil, Auxiliary Bishop of Thrissur and the construction started on 21-11-2011. The construction was completed and the church was blessed and opened on 28-12-2014 by Mar Andrews Thazhath in the presence of His Grace Archbishop, Enrico Dal Covolo from Rome. The then Vicar was Fr. Johnson Ainikal."),
-            Info("assets/images/nellikkunnu.jpg","Vicar","Fr. Raphael Vadakkan\nPhone: 9447435557\n\n8:30 AM to 12:30 PM\n3:30 PM to 6:45 PM"),
-            Info("assets/images/nellikkunnu.jpg","Assitant Vicar","Fr. Seejan Chakkalakkal\nPhone: 9567741060\n\n8:30 AM to 12:30 PM\n3:30 PM to 6:45 PM"),
-            Info("assets/images/nellikkunnu.jpg","Trustees","Alant Antony \nBaiju \nJohnson \nFranko KD"),
+            Info("assets/images/perunnal.jpeg","Perunnal","St. Sebastian Church, Nellikkunnu, Thrissur sets off with the 'Perunnall' celebrations!"),
+            Info("assets/images/nellikkunnu.jpg","Christmas","Christmas was well celebrated at the Nellikkunnu Church."),
+            Info("assets/images/nellikkunnu.jpg","Christmas Carol Competition","Christmas carol competition, Jingle Bells 2019."),
+            Info("assets/images/nellikkunnu.jpg","News","Any other relevant news."),
 
           ]
           ),
@@ -93,7 +93,7 @@ class Info extends StatelessWidget
       child:Column(
         children: <Widget>[
         Padding(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(50),
               child: SafeArea(
                 top: true,
                 child:ClipRRect(
